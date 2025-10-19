@@ -17,7 +17,8 @@
                                     <ToolbarSpacer/>
                                     <Button icon="sap-icon://create" 
                                             text="Create Customer"
-                                            press=".onSave"/>
+                                            press=".onSave"
+                                            enabled="{= ${customer>/CustomerName} !== undefined &amp;&amp; ${customer>/CustomerName}.length > 0 }"/>
                                 </content>
                             </Toolbar>
                         </f:toolbar>
@@ -34,7 +35,7 @@
                                           }"/>
                             <core:Title text="Address Data"/>
                             <Label text="Street"/>  
-                            <Input value="{customer>/Street}"/>
+                            <Input value="{customer>/Street}" valueLiveUpdate="true"/>
                             <Label text="Post Code"/>
                             <Input value="c{ustomer>/PostCode}"/>
                             <Label text="City"/>
@@ -114,7 +115,8 @@
                                                     type: 'sap.ui.model.type.Currency',
                                                     formatOptions: {showMeasure: false} }"
                                           unit="{ForeignCurrency}"/>
-                            <Text text="{IsCancelled}"/>
+                            <core:Icon src="{= ${IsCancelled} === 'X' ? 'sap-icon://cancel' : 'sap-icon://accept'}"
+                                       tooltip="{= ${IsCancelled} === 'X' ? 'Cancelled' : 'Not Cancelled' }" />
                         </cells>
                     </ColumnListItem>
                 </items>
