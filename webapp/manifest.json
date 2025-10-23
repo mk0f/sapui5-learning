@@ -98,7 +98,12 @@
                 "async": true,
                 "path": "sap.training.exc.view",
                 "controlAggregation": "pages",
-                "controlId": "app"
+                "controlId": "app",
+                "bypassed": {
+                    "target": [
+                        "notFound"
+                    ]
+                }
             },
             "routes": [
                 {
@@ -128,6 +133,12 @@
                     "name": "Detail",
                     "id": "detail",
                     "level": 2
+                },
+                "notFound": {
+                    "type": "View",
+                    "name": "NotFound",
+                    "id": "notFound",
+                    "transition": "show"
                 }
             }
         },
