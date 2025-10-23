@@ -96,12 +96,27 @@
                 "routerClass": "sap.m.routing.Router",
                 "viewType": "XML",
                 "async": true,
-                "viewPath": "sap.training.exc.view",
+                "path": "sap.training.exc.view",
                 "controlAggregation": "pages",
-                "controlId": "<...>"
+                "controlId": "app"
             },
-            "routes": [],
-            "targets": {}
+            "routes": [
+                {
+                    "name": "overview",
+                    "pattern": "",
+                    "target": [
+                        "overview"
+                    ]
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "type": "View",
+                    "name": "Overview",
+                    "id": "overview",
+                    "level": 1
+                }
+            }
         },
         "rootView": {
             "viewName": "sap.training.exc.view.App",
