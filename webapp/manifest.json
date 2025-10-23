@@ -107,6 +107,13 @@
                     "target": [
                         "overview"
                     ]
+                },
+                {
+                    "name": "detail",
+                    "pattern": "detail",
+                    "target": [
+                        "detail"
+                    ]
                 }
             ],
             "targets": {
@@ -115,6 +122,12 @@
                     "name": "Overview",
                     "id": "overview",
                     "level": 1
+                },
+                "detail": {
+                    "type": "View",
+                    "name": "Detail",
+                    "id": "detail",
+                    "level": 2
                 }
             }
         },
